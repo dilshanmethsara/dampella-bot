@@ -147,7 +147,7 @@ ${data.summary || data.content || ''}
 --------------------------------
     `.trim();
 
-    client.sendMessage(groupId, message).catch(err => console.error('Failed to send WhatsApp:', err));
+    client.sendMessage(groupId, message, { linkPreview: false }).catch(err => console.error('Failed to send WhatsApp:', err));
 }
 
 // 2. Assignments
@@ -173,7 +173,7 @@ ${data.description ? data.description.substring(0, 200) + (data.description.leng
 --------------------------------
     `.trim();
 
-    client.sendMessage(groupId, message).catch(err => console.error('Failed to send WhatsApp:', err));
+    client.sendMessage(groupId, message, { linkPreview: false }).catch(err => console.error('Failed to send WhatsApp:', err));
 }
 
 // 3. Quizzes
@@ -199,7 +199,7 @@ ${data.description || 'Test your skills with this new assessment!'}
 --------------------------------
     `.trim();
 
-    client.sendMessage(groupId, message).catch(err => console.error('Failed to send WhatsApp:', err));
+    client.sendMessage(groupId, message, { linkPreview: false }).catch(err => console.error('Failed to send WhatsApp:', err));
 }
 
 console.log('Starting WhatsApp Client...');
